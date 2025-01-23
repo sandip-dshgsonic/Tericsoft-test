@@ -208,7 +208,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 py-16 text-center relative z-20">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 51 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl mx-auto"
