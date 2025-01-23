@@ -205,7 +205,7 @@ export default function ResultsSection() {
                 className="relative bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-2xl p-8 overflow-hidden group"
               >
                 {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${metric.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                {/* <div className={`absolute inset-0 bg-gradient-to-r ${metric.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} /> */}
                 
                 {/* Icon */}
                 <motion.div
