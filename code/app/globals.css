@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme */
+  --foreground: 0, 0, 0;
+  --background-start: 255, 255, 255;
+  --background-end: 240, 249, 255;
+  --card-bg: 255, 255, 255, 0.8;
+  
+  /* Section backgrounds - Light */
+  --hero-bg: 240, 249, 255;
+  --challenges-bg: 248, 250, 252;
+  --strategy-bg: 255, 255, 255;
+  --features-bg: 248, 250, 252;
+  --cost-bg: 255, 255, 255;
+  --benefits-bg: 248, 250, 252;
+  --team-bg: 255, 255, 255;
+  --results-bg: 248, 250, 252;
+  --contact-bg: 255, 255, 255;
+}
+
+[data-theme='dark'] {
+  /* Dark theme */
+  --foreground: 255, 255, 255;
+  --background-start: 15, 23, 42;
+  --background-end: 30, 41, 59;
+  --card-bg: 30, 41, 59, 0.8;
+  
+  /* Section backgrounds - Dark */
+  --hero-bg: 15, 23, 42;
+  --challenges-bg: 17, 24, 39;
+  --strategy-bg: 19, 26, 43;
+  --features-bg: 17, 24, 39;
+  --cost-bg: 19, 26, 43;
+  --benefits-bg: 17, 24, 39;
+  --team-bg: 19, 26, 43;
+  --results-bg: 17, 24, 39;
+  --contact-bg: 19, 26, 43;
+}
+
+/* Section Background Classes */
+.hero-bg {
+  background: linear-gradient(
+    135deg,
+    rgba(var(--hero-bg), 0.95),
+    rgba(var(--hero-bg), 0.98)
+  ),
+  url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.challenges-bg {
+  background: linear-gradient(
+    to bottom right,
+    rgba(var(--challenges-bg), 0.97),
+    rgba(var(--challenges-bg), 0.95)
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.challenges-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.strategy-bg {
+  background: radial-gradient(
+    circle at top right,
+    rgba(var(--strategy-bg), 0.95),
+    rgba(var(--strategy-bg), 0.98)
+  );
+}
+
+.features-bg {
+  background: linear-gradient(
+    45deg,
+    rgba(var(--features-bg), 0.97),
+    rgba(var(--features-bg), 0.95)
+  );
+}
+
+.benefits-bg {
+  background: linear-gradient(
+    to right,
+    rgba(var(--benefits-bg), 0.97),
+    rgba(var(--benefits-bg), 0.95)
+  );
+}
+
+.team-bg {
+  background: radial-gradient(
+    circle at bottom left,
+    rgba(var(--team-bg), 0.95),
+    rgba(var(--team-bg), 0.98)
+  );
+}
+
+.results-bg {
+  background: linear-gradient(
+    -45deg,
+    rgba(var(--results-bg), 0.97),
+    rgba(var(--results-bg), 0.95)
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: 
+    radial-gradient(circle at 0% 0%, rgba(var(--background-start), 0.8) 0%, transparent 50%),
+    radial-gradient(circle at 100% 0%, rgba(var(--background-end), 0.8) 0%, transparent 50%),
+    linear-gradient(to bottom, rgb(var(--background-start)), rgb(var(--background-end)));
+  background-attachment: fixed;
+}
+
+/* Your existing gradient-text, blur-backdrop, and float animation */
+.gradient-text {
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blur-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Enhanced components */
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-primary-600 to-blue-700 text-white rounded-lg 
+           hover:from-primary-700 hover:to-blue-800 transition-all duration-300 
+           shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-padding {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+
+  .heading-1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+  }
+
+  .heading-2 {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+
+  .heading-3 {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+
+  .card {
+    @apply bg-opacity-80 backdrop-blur-sm rounded-xl shadow-lg p-6 
+           hover:shadow-xl transition-all duration-300 
+           border border-white/10 hover:border-primary-200
+           transform hover:-translate-y-1
+           dark:bg-slate-800/50 dark:border-slate-700/50;
+  }
+
+  .glass-card {
+    @apply bg-white/30 backdrop-blur-lg rounded-xl 
+           border border-white/20 shadow-lg
+           dark:bg-slate-800/30 dark:border-slate-700/20;
+  }
+
+  .theme-toggle {
+    @apply p-2 rounded-full transition-colors duration-200
+           hover:bg-gray-100 dark:hover:bg-slate-700;
+  }
+}
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-slate-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 dark:bg-slate-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500 dark:bg-slate-500;
+}
+
+/* Background patterns */
+.pattern-grid {
+  background-image: linear-gradient(rgba(var(--foreground), 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(var(--foreground), 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.pattern-dots {
+  background-image: radial-gradient(rgba(var(--foreground), 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
