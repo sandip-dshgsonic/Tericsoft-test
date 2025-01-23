@@ -180,8 +180,9 @@ export default function EnterpriseLandingPage() {
   }, []);
 
   return (
-    <div 
+    <section 
       ref={scrollRef} 
+      id="features"
       className="min-h-screen bg-gradient-to-b from-gray-900 via-blue-900 to-black flex items-center justify-center overflow-hidden"
     >
       <div className="container mx-auto px-4 relative w-full">
@@ -264,6 +265,6 @@ export default function EnterpriseLandingPage() {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

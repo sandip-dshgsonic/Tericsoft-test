@@ -41,8 +41,13 @@ import Animationsection from '../components/sections/Animationsection'
 import VideoShowcase from '../components/sections/Videoshowcase';
 import VideoShowcase2 from '@/components/sections/videoshowcase2';
 import Animationspage1 from '@/components/sections/Animationpage1';
-import Animationspage2 from '@/components/sections/Animationpage2';
+import Framework from '@/components/sections/Framework';
 import Animationspage3 from '@/components/sections/Animationspage3';
+import Tercsoftodc from '@/components/sections/Tericsoft-odc';
+import Infographics from '@/components/sections/Infographic';
+
+
+import BusinessImpact from '@/components/sections/Buisness_impact';
 
 const BackgroundVideo = () => (
   <div className="fixed inset-0 w-full h-full -z-10">
@@ -110,6 +115,20 @@ export default function Home() {
           >
             <StrategySection />
           </motion.div>
+
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <Framework />
+          </motion.div>
+
+
+         
+
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -127,18 +146,40 @@ export default function Home() {
             <CostSection />
           </motion.div>
 
-
-
-          {/* <motion.div
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <VideoShowcase />
-          </motion.div> */}
+            <Infographics />
+          </motion.div>
 
 
+
+        
+
+<motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <BenefitsSection />
+          </motion.div>
+
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <Tercsoftodc />
+          </motion.div>
+
+
+         
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -149,14 +190,7 @@ export default function Home() {
           </motion.div>
 
           
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <BenefitsSection />
-          </motion.div>
+         
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -169,25 +203,7 @@ export default function Home() {
 
 
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            {/* <VideoShowcase2 /> */}
-          </motion.div>
-
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            {/* <Animationspage2 /> */}
-          </motion.div>
-
+         
           
 
 

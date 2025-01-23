@@ -6,7 +6,15 @@ import { ArrowRight, Play } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
+import Link from 'next/link';
+
 const stats = [
+
+  { 
+    label: 'Increased Workforce Efficiency', 
+    value: '30%',
+    description: 'Productivity boost'
+  },
   { 
     label: 'Total Cost Reduction', 
     value: '40%',
@@ -17,11 +25,7 @@ const stats = [
     value: '60%',
     description: 'Improvement in efficiency'
   },
-  { 
-    label: 'Increased Workforce Efficiency', 
-    value: '30%',
-    description: 'Productivity boost'
-  },
+ 
 ];
 
 export default function HeroSection() {
@@ -112,6 +116,20 @@ export default function HeroSection() {
             >
               <Play className="w-5 h-5" /> Watch Demo
             </motion.button>
+
+{/* <Link href="#demo" passHref>
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="bg-white/10 backdrop-blur-sm border border-white/20
+                   text-white px-8 py-4 rounded-xl hover:bg-white/20
+                   transition-all duration-300 flex items-center
+                   justify-center gap-2 w-full sm:w-auto"
+      >
+        <Play className="w-5 h-5" />
+        Watch Demo
+      </motion.button>
+    </Link> */}
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-10xl mx-auto justify-center">
