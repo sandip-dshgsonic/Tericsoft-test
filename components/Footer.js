@@ -144,14 +144,14 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Tericsoft. All rights reserved.
           </p>
           <div className="flex space-x-4">
-            <a 
+            {/* <a 
               href="https://github.com/tericsoft" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-gray-400 hover:text-white transition-colors"
             >
               <Github className="w-6 h-6 hover:scale-110 transition-transform" />
-            </a>
+            </a> */}
             <a 
               href="https://linkedin.com/company/tericsoft" 
               target="_blank" 
