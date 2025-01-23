@@ -104,7 +104,7 @@ export default function Header() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <motion.div
+          {/* <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{
@@ -121,7 +121,32 @@ export default function Header() {
                 Tericsoft
               </span>
             </Link>
-          </motion.div>
+          </motion.div> */}
+
+<motion.div
+  initial={{ x: -50, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  transition={{
+    type: 'spring',
+    stiffness: 500,
+    damping: 15,
+    duration: 1,
+  }}
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  <Link href="/" className="flex items-center space-x-2">
+    {/* <img
+      src="/Images/logo (2).png" // Replace with your actual image path
+      alt="Tericsoft Logo"
+      className="w-40 h-50 object-contain" // Customize the size and behavior of the image
+    /> */}
+    <span className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-blue-600 bg-clip-text text-transparent">
+      Tericsoft
+    </span>
+  </Link>
+</motion.div>
+
 
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link, i) => (
