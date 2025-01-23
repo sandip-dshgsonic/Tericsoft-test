@@ -97,7 +97,7 @@ export default function HeroSection() {
               whileTap={{ scale: 0.95 }}
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
-              onClick={handleGetStarted}
+              // onClick={handleGetStarted}
               className="group bg-gradient-to-r from-primary-600 to-blue-600 text-white px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300 flex items-center justify-center gap-2 w-full sm:w-auto"
             >
               Get Started 
@@ -107,7 +107,7 @@ export default function HeroSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={handleWatchDemo}
+              // onClick={handleWatchDemo}
               className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 w-full sm:w-auto"
             >
               <Play className="w-5 h-5" /> Watch Demo
