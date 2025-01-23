@@ -38,7 +38,7 @@ export default function SchedulePage() {
         >
           <h1 className="heading-1 mb-4">Schedule a Consultation</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Let's discuss how our ODC solutions can transform your business
+            Let&apos;s discuss how our ODC solutions can transform your business
           </p>
         </motion.div>
 

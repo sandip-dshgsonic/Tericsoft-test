@@ -15,7 +15,7 @@ export default function ContactPage() {
         >
           <h1 className="heading-1 mb-4">Get in Touch</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We'd love to hear from you. Let's discuss how we can help your business grow.
+            We&apos;d love to hear from you. Let&apos;s discuss how we can help your business grow.
           </p>
         </motion.div>
 

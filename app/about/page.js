@@ -38,7 +38,7 @@ export default function AboutPage() {
                 Founded in 2010, Tericsoft has been at the forefront of providing innovative ODC solutions to businesses worldwide. Our journey began with a simple mission: to bridge the gap between talented developers and businesses seeking quality software development services.
               </p>
               <p>
-                Today, we're proud to have helped numerous organizations achieve their technological goals through our comprehensive ODC solutions. Our commitment to excellence and customer satisfaction has made us a trusted partner in the global IT industry.
+                Today, we&apos;re proud to have helped numerous organizations achieve their technological goals through our comprehensive ODC solutions. Our commitment to excellence and customer satisfaction has made us a trusted partner in the global IT industry.
               </p>
             </div>
           </motion.div>
