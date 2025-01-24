@@ -180,7 +180,7 @@ export default function HeroSection() {
           >
             <div className="relative">
               <img
-                src="/images/10928.jpg"
+                src="/Images/10928.jpg"
                 alt="Banner Image"
                 className="w-full h-auto max-h-[500px] md:h-[500px] object-cover rounded-1xl mt-5"
               />
