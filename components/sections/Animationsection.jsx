@@ -44,63 +44,65 @@ const WaveBackground = () => (
 );
 
 // Animated Stat Card
-const StatCard = ({ icon: Icon, title, value, unit, delay }) => {
-  const [ref, inView] = useInView({ triggerOnce: true });
-  const [isHovered, setIsHovered] = useState(false);
+// const StatCard = ({ icon: Icon, title, value, unit, delay, description }) => {
+//   const [ref, inView] = useInView({ triggerOnce: true });
+//   const [isHovered, setIsHovered] = useState(false);
 
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, delay }}
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
-      className="relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl overflow-hidden"
-    >
-      <motion.div
-        animate={isHovered ? { scale: 1.2, rotate: 12 } : { scale: 1, rotate: 0 }}
-        className="absolute top-2 right-2 text-blue-500/20"
-      >
-        <Icon size={80} />
-      </motion.div>
+//   return (
+//     <motion.div
+//       ref={ref}
+//       initial={{ opacity: 0, y: 50 }}
+//       animate={inView ? { opacity: 1, y: 0 } : {}}
+//       transition={{ duration: 0.8, delay }}
+//       onHoverStart={() => setIsHovered(true)}
+//       onHoverEnd={() => setIsHovered(false)}
+//       className="relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl overflow-hidden"
+//     >
+//       <motion.div
+//         animate={isHovered ? { scale: 1.2, rotate: 12 } : { scale: 1, rotate: 0 }}
+//         className="absolute top-2 right-2 text-blue-500/20"
+//       >
+//         <Icon size={80} />
+//       </motion.div>
       
-      <div className="relative z-10">
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={inView ? { scale: 1 } : {}}
-          transition={{ delay: delay + 0.3, type: "spring" }}
-          className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mb-4"
-        >
-          <Icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-        </motion.div>
+//       <div className="relative z-10">
+//         <motion.div
+//           initial={{ scale: 0 }}
+//           animate={inView ? { scale: 1 } : {}}
+//           transition={{ delay: delay + 0.3, type: "spring" }}
+//           className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mb-4"
+//         >
+//           <Icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+//         </motion.div>
         
-        <h3 className="text-lg font-medium text-gray-600 dark:text-gray-300 mb-2">{title}</h3>
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={inView ? { opacity: 1, x: 0 } : {}}
-          transition={{ delay: delay + 0.5 }}
-          className="text-4xl font-bold text-gray-900 dark:text-gray-100"
-        >
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            transition={{ duration: 2, delay: delay + 0.7 }}
-          >
-            {value}
-          </motion.span>
-          <span className="text-blue-500 ml-1">{unit}</span>
-        </motion.div>
-      </div>
+//         <h2 className="text-lg font-medium text-gray-600 dark:text-gray-300 mb-2">{title}</h2>
+//         <p className="text-gray-600 dark:text-gray-300">{description}</p>
 
-      <motion.div
-        initial={false}
-        animate={isHovered ? { opacity: 1 } : { opacity: 0 }}
-        className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-purple-500/10"
-      />
-    </motion.div>
-  );
-};
+//         <motion.div
+//           initial={{ opacity: 0, x: -20 }}
+//           animate={inView ? { opacity: 1, x: 0 } : {}}
+//           transition={{ delay: delay + 0.5 }}
+//           className="text-4xl font-bold text-gray-900 dark:text-gray-100"
+//         >
+//           <motion.span
+//             initial={{ opacity: 0 }}
+//             animate={inView ? { opacity: 1 } : {}}
+//             transition={{ duration: 2, delay: delay + 0.7 }}
+//           >
+//             {value}
+//           </motion.span>
+//           <span className="text-blue-500 ml-1">{unit}</span>
+//         </motion.div>
+//       </div>
+
+//       <motion.div
+//         initial={false}
+//         animate={isHovered ? { opacity: 1 } : { opacity: 0 }}
+//         className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-purple-500/10"
+//       />
+//     </motion.div>
+//   );
+// };
 
 // Animated Feature Card
 const FeatureCard = ({ icon: Icon, title, description, delay }) => {
@@ -176,31 +178,35 @@ export default function ModernNabisShowcase() {
       </div>
 
       {/* Stats Section */}
-      <div className="container mx-auto px-4 mb-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <StatCard
-            icon={BarChart3}
-            title="Cost Reduction"
-            value="40"
-            unit="%"
-            delay={0.2}
-          />
-          <StatCard
-            icon={Zap}
-            title="Operation Streamlined"
-            value="60"
-            unit="%"
-            delay={0.4}
-          />
-          <StatCard
-            icon={TrendingUp}
-            title="Workforce Efficiency"
-            value="30"
-            unit="%"
-            delay={0.6}
-          />
-        </div>
-      </div>
+      {/* <div className="container mx-auto px-4 mb-32">
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <StatCard
+    icon={TrendingUp}
+    title="Increased Workforce Efficiency"
+    description="Productivity boost"
+    value="30"
+    unit="%"
+    delay={0.6}
+  />
+  <StatCard
+    icon={BarChart3}
+    title="Total Cost Reduction"
+    description="Average savings achieved"
+    value="40"
+    unit="%"
+    delay={0.2}
+  />
+  <StatCard
+    icon={Zap}
+    title="Operation Streamlined"
+    description="Improvement in efficiency"
+    value="60"
+    unit="%"
+    delay={0.4}
+  />
+</div> 
+
+      </div> */}
 
       {/* Features Section */}
       <div className="container mx-auto px-4 mb-32">

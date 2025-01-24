@@ -77,7 +77,6 @@
 // }
 
 
-
 'use client';
 
 import React from 'react';
@@ -132,7 +131,7 @@ const cardVariants = {
   hidden: { 
     opacity: 0,
     y: 50,
-    scale: 0.9
+    scale: 0.9,
   },
   visible: {
     opacity: 1,
@@ -141,8 +140,8 @@ const cardVariants = {
     transition: {
       type: "spring",
       stiffness: 100,
-      damping: 12
-    }
+      damping: 12,
+    },
   },
   hover: {
     scale: 1.05,
@@ -150,9 +149,9 @@ const cardVariants = {
     transition: {
       type: "spring",
       stiffness: 400,
-      damping: 10
-    }
-  }
+      damping: 10,
+    },
+  },
 };
 
 const iconVariants = {
@@ -163,16 +162,16 @@ const iconVariants = {
     transition: {
       type: "spring",
       stiffness: 200,
-      damping: 20
-    }
+      damping: 20,
+    },
   },
   hover: {
     rotate: 360,
     transition: {
       duration: 0.8,
-      ease: "easeInOut"
-    }
-  }
+      ease: "easeInOut",
+    },
+  },
 };
 
 export default function BenefitsSection() {
@@ -182,40 +181,32 @@ export default function BenefitsSection() {
   });
 
   return (
-    <section  id="benifits" className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="benefits" className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-16"
         >
-
-
-           <motion.div 
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        animate={inView ? { opacity: 1, scale: 1 } : {}}
-                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                        className="inline-block mb-6"
-                      >
-                        <span className="px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 text-sm font-medium">
-                          Our Advantages
-                        </span>
-                      </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ type: "spring", stiffness: 200, damping: 20 }}
+            className="inline-block mb-10"
+          >
+            <span className="px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 text-sm font-medium">
+              Our Advantages
+            </span>
+          </motion.div>
           <motion.h2 
-            className="text-4xl font-bold text-gray-900 dark:text-white mb-6"
+            className="text-4xl lg:text-4xl font-bold mb-5 text-center bg-gradient-to-r from-gray-600 to-gray-600 bg-clip-text text-transparent"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
             ODC Benefits
           </motion.h2>
-          <motion.div
-            className="h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-6"
-            initial={{ width: 0 }}
-            animate={inView ? { width: 80 } : {}}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          />
           <motion.p 
             className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
@@ -247,7 +238,7 @@ export default function BenefitsSection() {
               >
                 <benefit.icon className="w-6 h-6 text-white" />
               </motion.div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+              <h3 className="text-xl font-semibold mb-4 text-orange-500 dark:text-white">
                 {benefit.title}
               </h3>
               <p className="text-gray-600 dark:text-gray-300">

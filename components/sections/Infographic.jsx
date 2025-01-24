@@ -186,12 +186,26 @@ const OdcStructure = () => {
   };
   return (
     <section id="infograph" className="min-h-screen px-4 py-12 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
-      <motion.div
+
+     <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-4xl lg:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-gray-600 to-gray-600 bg-clip-text text-transparent"
+
+        >
+        Infographics of Tericsoft ODC Structure
+
+        </motion.h2>
+
+         <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         className="max-w-6xl mx-auto rounded-lg shadow-2xl p-8 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
       >
+
+
         <motion.div
           className="relative w-full h-[600px] rounded-md overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-300"
           variants={imageVariants}
@@ -209,7 +223,7 @@ const OdcStructure = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="bg-gradient-to-r from-blue-900 to-blue-800 text-white p-8 rounded-md mt-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+          className="bg-gradient-to-r from-yellow-500 to-yellow-500 text-white p-8 rounded-md mt-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
         >
           <p className="text-xl font-semibold text-center leading-relaxed">
             ODC Smart Scaling: Pay only for what you need. Through precision resource management and optimized team expertise, experience 40% cost reduction while maintaining peak performance.

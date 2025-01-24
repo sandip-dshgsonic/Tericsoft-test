@@ -7,7 +7,7 @@ const TericsoftInfo = () => {
       title: "Streamlined Business Operations",
       icon: Zap,
       description: "Integrates HR, Accounting, IT, and Employee Engagement to enhance onboarding, payroll, device management, and project delivery.",
-      color: "blue"
+      color: "yellow"
     },
     {
       title: "Employee-Centric Approach",
@@ -45,12 +45,13 @@ const TericsoftInfo = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-indigo-400 mb-4">
+          <h1 className="text-4xl lg:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-gray-600 to-gray-600 bg-clip-text text-transparent"
+          >
             Tericsoft ODC
           </h1>
-          <div className="h-1 w-24 bg-blue-600 dark:bg-blue-400 mx-auto rounded-full"/>
+          {/* <div className="h-1 w-24 bg-blue-600 dark:bg-blue-400 mx-auto rounded-full"/> */}
         </motion.div>
         <motion.div
           variants={containerVariants}
@@ -75,7 +76,7 @@ const TericsoftInfo = () => {
                   <feature.icon className={`w-6 h-6 text-${feature.color}-600 dark:text-${feature.color}-400`} />
                 </div>
                 <div>
-                  <h2 className="text-xl sm:text-2xl font-bold mb-3 text-gray-800 dark:text-white">
+                  <h2 className="text-xl sm:text-2xl font-bold mb-3 text-orange-500 dark:text-white">
                     {feature.title}
                   </h2>
                   <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300">

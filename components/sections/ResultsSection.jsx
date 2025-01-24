@@ -28,12 +28,12 @@ const BusinessImpact = () => {
     >
       <div className="p-6 bg-white/80 backdrop-blur-md rounded-lg shadow-lg
                     transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]
-                    border border-gray-100 hover:border-blue-200">
+                    border border-gray-100 hover:border-yellow-200">
         <div className="flex items-center gap-4 mb-6">
-          <div className="p-3 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors duration-300">
-            <Icon className="w-6 h-6 text-blue-900" />
+          <div className="p-3 bg-yellow-100 rounded-lg group-hover:bg-yellow-200 transition-colors duration-300">
+            <Icon className="w-6 h-6 text-yellow-900" />
           </div>
-          <h3 className="text-xl font-bold bg-gradient-to-r from-blue-900 to-blue-700
+          <h3 className="text-xl font-bold bg-gradient-to-r from-yellow-900 to-yellow-700
                        bg-clip-text text-transparent">{title}</h3>
         </div>
         <ul className="space-y-4">
@@ -66,12 +66,12 @@ const BusinessImpact = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-4xl md:text-5xl font-bold text-center mb-12 pb-4
-                     bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent
-                     border-b-2 border-blue-200"
+          className="text-4xl lg:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-gray-600 to-gray-600 bg-clip-text text-transparent"
+
         >
           Results and Business Impact
         </motion.h2>
+        
         <div className="grid md:grid-cols-2 gap-8">
           <Section
             title="Leveraging Local Talent"
@@ -115,10 +115,10 @@ const BusinessImpact = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="mt-16 bg-gradient-to-br from-blue-900 to-blue-800 text-white p-8 rounded-lg shadow-xl
+          className="mt-16 bg-gradient-to-br from-yellow-500 to-yellow-500 text-white p-8 rounded-lg shadow-xl
                      transform hover:scale-[1.01] transition-transform duration-300"
         >
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 border-b pb-3 border-blue-400">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 border-b pb-3 border-yellow-400">
             Value to the Client
           </h2>
           <ul className="space-y-6">

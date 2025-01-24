@@ -204,7 +204,8 @@ export default function FeaturesSection() {
               </span>
             </motion.div>
           <motion.h2
-            className="text-4xl font-bold text-gray-900 dark:text-white mb-6"
+             className="text-4xl lg:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-gray-600 to-gray-600 bg-clip-text text-transparent"
+
             initial={{ opacity: 0, scale: 0.9 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.8 }}
@@ -240,12 +241,12 @@ export default function FeaturesSection() {
               <motion.div
                 variants={iconVariants}
                 whileHover="hover"
-                className="relative mb-8 inline-block text-primary-600 dark:text-primary-400"
+                className="relative mb-8 inline-block text-orange-600 dark:text-orange-400"
               >
                 <feature.icon size={48} />
               </motion.div>
 
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+              <h3 className="text-2xl font-bold mb-4 text-orange-500 dark:text-white">
                 {feature.title}
               </h3>
               
@@ -261,7 +262,7 @@ export default function FeaturesSection() {
                     custom={detailIndex}
                     className="flex items-center text-gray-700 dark:text-gray-300"
                   >
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mr-3 flex-shrink-0" />
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 flex-shrink-0" />
                     {detail}
                   </motion.li>
                 ))}

@@ -45,13 +45,13 @@ import Framework from '@/components/sections/Framework';
 import Animationspage3 from '@/components/sections/Animationspage3';
 import Tercsoftodc from '@/components/sections/Tericsoft-odc';
 import Infographics from '@/components/sections/Infographic';
-
+import Animatedvideo from '@/components/sections/Animatedvideo';
 
 import BusinessImpact from '@/components/sections/Buisness_impact';
 
 const BackgroundVideo = () => (
   <div className="fixed inset-0 w-full h-full -z-10">
-    <video
+    {/* <video
       autoPlay
       loop
       muted
@@ -60,7 +60,7 @@ const BackgroundVideo = () => (
       style={{ filter: 'brightness(0.7) contrast(1.1)' }}
     >
       <source src="/Videos/Buisness.mp4" type="video/mp4" />
-    </video>
+    </video> */}
     {/* Modern gradient overlay */}
     <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-900/75 to-gray-900/90"></div>
     {/* Mesh gradient for added depth */}
@@ -127,7 +127,24 @@ export default function Home() {
           </motion.div>
 
 
-         
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <Tercsoftodc />
+          </motion.div>         
+
+          
+<motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <BenefitsSection />
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -135,8 +152,10 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <FeaturesSection />
+            <Animatedvideo />
           </motion.div>
+
+
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -155,19 +174,15 @@ export default function Home() {
             <Infographics />
           </motion.div>
 
-
-
-        
-
-<motion.div
+          
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <BenefitsSection />
+            <ResultsSection />
           </motion.div>
-
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -175,10 +190,8 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <Tercsoftodc />
+            <FeaturesSection />
           </motion.div>
-
-
          
           <motion.div
             initial={{ opacity: 0 }}
@@ -188,18 +201,9 @@ export default function Home() {
           >
             <Animationspage1 />
           </motion.div>
-
-          
          
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <Animationsection />
-          </motion.div>
+        
 
 
 
@@ -208,14 +212,14 @@ export default function Home() {
 
 
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <TeamSection />
-          </motion.div>
+          </motion.div> */}
 
 
 
@@ -229,14 +233,6 @@ export default function Home() {
           </motion.div>
 
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <ResultsSection />
-          </motion.div>
         </motion.div>
       </ContentContainer>
     </PageWrapper>

@@ -28,7 +28,6 @@
 //   );
 // }
 
-
 "use client";
 
 import { useEffect } from "react";
@@ -38,10 +37,10 @@ import { useTheme } from "./ThemeProvider";
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
-  // Ensure the default theme is dark
+  // Ensure the default theme is light
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const defaultTheme = savedTheme || "dark";
+    const defaultTheme = savedTheme || "light";
     setTheme(defaultTheme);
     document.documentElement.setAttribute("data-theme", defaultTheme);
   }, [setTheme]);

@@ -80,7 +80,7 @@ const TericsoftFramework = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-4xl lg:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"
+          className="text-4xl lg:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-gray-600 to-gray-600 bg-clip-text text-transparent"
         >
           Tericsoft ODC Framework
         </motion.h1>
@@ -99,7 +99,7 @@ const TericsoftFramework = () => {
                 whileHover={{ scale: 1.02 }}
                 className="rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden backdrop-blur-sm border border-gray-100"
               >
-                <div className="p-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+                <div className="p-4 bg-gradient-to-r from-yellow-500 to-yellow-500 text-white">
                   <div className="flex items-center gap-3">
                     <Icon className="w-6 h-6" />
                     <h2 className="font-bold text-lg">{section.title}</h2>
@@ -118,7 +118,7 @@ const TericsoftFramework = () => {
                         className="p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300"
                       >
                         <div className="flex items-center gap-2 mb-2">
-                          <ItemIcon className="w-5 h-5 text-blue-600" />
+                          <ItemIcon className="w-5 h-5 text-yellow-600" />
                           <h3 className="font-semibold text-gray-800">{item.header}</h3>
                         </div>
                         <p className="text-sm text-gray-600 ml-7">{item.content}</p>
@@ -150,7 +150,7 @@ const TericsoftFramework = () => {
                   <div className={`p-3 rounded-lg ${feature.bgColor}`}>
                     <FeatureIcon className={`w-6 h-6 ${feature.textColor}`} />
                   </div>
-                  <span className="font-semibold text-gray-800">{feature.title}</span>
+                  <span className="font-semibold text-orange-500">{feature.title}</span>
                 </div>
               </motion.div>
             );
@@ -161,7 +161,7 @@ const TericsoftFramework = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="max-w-3xl mx-auto p-8 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg text-center"
+          className="max-w-3xl mx-auto p-8 rounded-xl bg-gradient-to-r from-yellow-500 to-yellow-500 text-white shadow-lg text-center"
         >
           <p className="text-lg font-medium">
             A comprehensive framework for managing business operations efficiently and effectively.

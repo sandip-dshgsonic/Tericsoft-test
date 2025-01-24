@@ -216,13 +216,13 @@
 
 
 
-
 'use client';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { DollarSign } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LabelList } from 'recharts';
 import { useEffect } from 'react';
+
 const costData = [
   {
     name: 'Junior',
@@ -243,6 +243,7 @@ const costData = [
     category: 'Developer'
   },
 ];
+
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
@@ -279,6 +280,7 @@ const CustomTooltip = ({ active, payload, label }) => {
   }
   return null;
 };
+
 const CustomBar = (props) => {
   const { fill, x, y, width, height } = props;
   
@@ -309,12 +311,14 @@ const CustomBar = (props) => {
     </motion.g>
   );
 };
+
 export default function CostSection() {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
+
   useEffect(() => {
     if (inView) {
       controls.start({
@@ -331,6 +335,7 @@ export default function CostSection() {
       });
     }
   }, [controls, inView]);
+
   return (
     <section id="cost" className="py-16 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -345,11 +350,11 @@ export default function CostSection() {
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            <span className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
-              <DollarSign className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+            <span className="p-2 bg-orange-100 dark:bg-orange-900 rounded-lg">
+              <DollarSign className="w-6 h-6 text-orange-600 dark:text-orange-400" />
             </span>
           </motion.div>
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+          <h2 className="text-4xl lg:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-gray-600 to-gray-600 bg-clip-text text-transparent">
             Cost Comparison
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">

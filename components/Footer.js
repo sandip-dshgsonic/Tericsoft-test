@@ -74,7 +74,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4 transform transition-transform hover:scale-[1.02]">
-            <h3 className="text-2xl font-bold mb-4 text-white">Tericsoft</h3>
+            <h3 className="text-2xl font-bold mb-4 text-purple-800">Tericsoft</h3>
             <p className="text-gray-300 leading-relaxed">
               Leading provider of Offshore Development Center solutions, helping businesses
               achieve operational excellence and cost optimization.
@@ -83,7 +83,7 @@ export default function Footer() {
           
           {/* Quick Links */}
           <div className="space-y-4 transform transition-transform hover:scale-[1.02]">
-            <h3 className="text-2xl font-bold mb-4 text-white">Quick Links</h3>
+            <h3 className="text-2xl font-bold mb-4 text-orange-500">Quick Links</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/about" className="group flex items-center text-gray-300 hover:text-white transition-all duration-300">
@@ -108,7 +108,7 @@ export default function Footer() {
           
           {/* Contact Info */}
           <div className="space-y-4 transform transition-transform hover:scale-[1.02]">
-            <h3 className="text-2xl font-bold mb-4 text-white">Contact Us</h3>
+            <h3 className="text-2xl font-bold mb-4 text-orange-500">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-center">
                 <Mail className="w-6 h-6 mr-3 text-blue-400 animate-pulse" />
