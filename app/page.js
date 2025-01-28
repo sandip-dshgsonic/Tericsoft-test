@@ -146,14 +146,14 @@ export default function Home() {
             <BenefitsSection />
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <Animatedvideo />
-          </motion.div>
+          </motion.div> */}
 
 
           <motion.div
